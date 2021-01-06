@@ -1,25 +1,52 @@
-Host jenkins.brew.sh
-	User brew
-	ForwardAgent yes
+ForwardAgent yes
 
-Host bastion.githubapp.com
-	ForwardAgent yes
 
-Host *.github.com *.github.net *.githubapp.com
-	ForwardAgent no
-	User mikemcquaid
+# Theodo lean
+Host theodo-gw
+        Hostname 10.11.0.1
+        User theodo
+        Port 22
 
-Host github-shell
-	User mikemcquaid
-	HostName shell.service.cp1-iad.github.net
-	ProxyJump bastion.githubapp.com
+Host theodo-m33theodolean-theodo-fr
+        User www-data
+        ProxyCommand ssh theodo-gw nc m33theodolean-theodo-fr %p
+
+Host theodo-m33theodolean-theodo-fr-support
+        User support
+        ProxyCommand ssh theodo-gw nc m33theodolean-theodo-fr %p
+
+Host theodo-m33theodolean-theodo-uk
+        User www-data
+        ProxyCommand ssh theodo-gw nc m33theodolean-theodo-uk %p
+
+Host theodo-m33theodolean-theodo-uk-support
+        User support
+        ProxyCommand ssh theodo-gw nc m33theodolean-theodo-uk %p
+
+Host theodo-m33theodolean-bamlab
+        User www-data
+        ProxyCommand ssh theodo-gw nc m33theodolean-bamlab %p
+
+Host theodo-m33theodolean-sicara
+        User www-data
+        ProxyCommand ssh theodo-gw nc m33theodolean-sicara %p
+
+Host theodo-m33theodolean-sipios
+        User www-data
+        ProxyCommand ssh theodo-gw nc m33theodolean-sipios %p
+
+Host theodo-m33theodolean-padok
+        User www-data
+        ProxyCommand ssh theodo-gw nc m33theodolean-padok %p
+
+Host theodo-m33theodolean-theodo-academy
+        User www-data
+        ProxyCommand ssh theodo-gw nc m33theodolean-theodo-academy %p
 
 Host *
 	StrictHostKeyChecking ask
 	VerifyHostKeyDNS ask
 	NoHostAuthenticationForLocalhost yes
-	IdentityFile ~/.ssh/id_ed25519
-	IdentityFile ~/.ssh/id_rsa
 	UseKeychain yes
 	AddKeysToAgent yes
 	ControlMaster auto

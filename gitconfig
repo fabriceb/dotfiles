@@ -1,11 +1,11 @@
 [user]
 	# Name used in commit messages.
-	name = Mike McQuaid
+	name = Fabrice Bernhard
 	# Email used in commit messages.
-	email = mike@mikemcquaid.com
+	email = fabriceb@theodo.co.uk
 [github]
 	# GitHub username for command-line tools.
-	user = MikeMcQuaid
+	user = fabriceb
 [color]
 	# Colour terminal command output when possible.
 	ui = auto
