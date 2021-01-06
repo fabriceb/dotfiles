@@ -1,5 +1,3 @@
-tap "github/bootstrap"
-tap "github/packages"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
@@ -16,8 +14,6 @@ brew "bat"
 brew "cmake"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
-# Modern replacement for 'ls'
-brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Cleans up old and inactive forks on your GitHub account
@@ -26,16 +22,10 @@ brew "fork-cleaner"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Generic library support script
-brew "libtool"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Colorize logfiles and command output
 brew "grc"
 # Improved top (interactive process viewer)
 brew "htop"
-# High-performance regular expression matching library
-brew "hyperscan"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Mac App Store command-line interface
@@ -48,8 +38,6 @@ brew "ncdu"
 brew "prettyping"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Static analysis and lint tool, for (ba)sh scripts
-brew "shellcheck"
 # SOcket CAT: netcat on steroids
 brew "socat"
 # Internet file retriever
